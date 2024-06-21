@@ -14,7 +14,8 @@ save=True : saves labels [class,centroid1,centroid2,centroid3,w,l,h,orientation1
 save_imgs=True : saves images as jpg and depth images as png [image/0000001.jpg] depth/0000001.png]
 
 save_pcd=True : saves point cloud data created from depth image as .npz file, 
-                np.array([N, 6]) N = number of points, points = pcd[:, 0:3] , colors = pcd[:, 3:6] (takes_time, if you set it to false process will be completed in 2 minutes)
+                np.array([N, 6]) N = number of points, points = pcd[:, 0:3] , colors = pcd[:, 3:6]
+                (takes_time, if you set it to false process will be completed in 3 minutes)
 
 save_votes=True : saves votes as .npz file
 
