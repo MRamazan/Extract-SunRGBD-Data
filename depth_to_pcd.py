@@ -72,15 +72,6 @@ if __name__ == "__main__":
     example = ExampleDepthPointCloud()
     example.run()
 
-    import psutil
 
-    # Tüm sıcaklık sensörlerini oku
-    sensors = psutil.sensors_temperatures()
 
-    # Her bir sensörü ve sıcaklığını yazdır
-    for name, entries in sensors.items():
-        print(f"Sensor: {name}")
-        for entry in entries:
-            print(
-                f"  Label: {entry.label}, Current: {entry.current}°C, High: {entry.high}°C, Critical: {entry.critical}°C")
 
