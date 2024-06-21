@@ -21,7 +21,7 @@ save_votes=True : saves votes as .npz file
 '''
 
 
-save_folder = "/media/godling/4A686835686821C5/Users/PC/PycharmProjects/pythonProject2/votenet_nocuda/sunrgbd/sunrgbd_trainval"
+save_folder = "sunrgbd_labels"
 classes =['bookshelf', 'chair', 'sofa', 'table', 'computer', 'desk', 'keyboard', 'paper',
                        'garbage_bin', 'monitor', 'sofa_chair', 'box', 'recycle_bin', 'cpu', 'whiteboard',
                        'shelf', 'endtable', 'cabinet', 'lamp', 'drawer', 'painting', 'sink', 'picture',
@@ -47,7 +47,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
         os.mkdir(os.path.join(save_folder , "pcd"))
     if not os.path.exists(os.path.join(save_folder , "votes")):
         os.mkdir(os.path.join(save_folder , "votes"))
-    matlab_meta = sio.loadmat(r"/home/godling/votenet/sunrgbd/OFFICIAL_SUNRGBD/SUNRGBDMeta3DBB_v2.mat")
+    matlab_meta = sio.loadmat("SUNRGBDMeta3DBB_v2.mat")
     for i in range(len(matlab_meta['SUNRGBDMeta'][0])):
         if i - 1 == 10335 - missing_annotation:
             break
@@ -95,14 +95,6 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
             img_paths.append(rgb_img_dir)
 
 
-
-
-
-
-
-
-
-
         if save:
           with open(label_filename, "w") as file:
             for obj in all_objs:
@@ -140,7 +132,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
           pcd, pcd_color = depth_to_pcd.run(image, depth, camera_calib["Rtilt"], camera_calib["K"])
           stacked = np.concatenate((pcd, pcd_color), axis=1)
           sampled = random_sampling(stacked, 175000)
-          #np.savez_compressed(pcd_filename, pc=sampled)
+          np.savez_compressed(pcd_filename, pc=sampled)
           if save_votes:
               N = sampled.shape[0]
               point_votes = np.zeros((N, 10))
@@ -194,7 +186,7 @@ save_votes=True : saves votes
 '''
 
 
-extract_sunrgbd_data(save_folder, False, False, True, True)
+extract_sunrgbd_data(save_folder, False, False, False, True)
 
 
 
