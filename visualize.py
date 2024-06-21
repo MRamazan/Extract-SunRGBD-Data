@@ -26,10 +26,12 @@ def VISUALIZE_POINT_CLOUD_DATA_AND_BBOXES(pcd, corners3d):
     point_cloud.colors = o3d.utility.Vector3dVector(np.array(color))
     visualize.visualize_point_cloud_data_and_bboxes(point_cloud, corners3d)
 
-'''VISUALIZE POINT CLOUD DATA AND BBOXES'''
+'''VISUALIZE POINT CLOUD DATA AND BBOXES
+   Required folders:  Extract-SunRGBD-Data/calib, Extract-SunRGBD-Data/image, Extract-SunRGBD-Data/label'''
 #VISUALIZE_POINT_CLOUD_DATA_AND_BBOXES(pcd, corners3d)
 
-'''VISUALIZE 3D BBOXES ON 2D IMAGE'''
+'''VISUALIZE 3D BBOXES ON 2D IMAGE
+   Required folders:  Extract-SunRGBD-Data/image, Extract-SunRGBD-Data/calib'''
 #VISUALIZE_3D_BBOXES_ON_2D_IMAGE(rgb_image, corners3d, K, Rtilt)
 
 
