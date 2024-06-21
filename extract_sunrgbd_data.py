@@ -171,8 +171,6 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
 
 
 
-
-
 '''
 
 save=True : saves labels [class,centroid1,centroid2,centroid3,w,l,h,orientation1,orientation2]
@@ -187,20 +185,6 @@ save_votes=True : saves votes
 
 
 extract_sunrgbd_data(save_folder, False, False, False, True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
