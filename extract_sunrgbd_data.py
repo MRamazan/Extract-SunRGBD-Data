@@ -5,7 +5,7 @@ import numpy as np
 import scipy.io as sio
 from depth_to_pcd import ExampleDepthPointCloud
 import sun_utils
-from utils.pc_util import random_sampling
+
 
 '''
 
@@ -70,8 +70,8 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
         #image_folder = matlab_meta["SUNRGBDMeta"][0][i][0][0]
         rgb_img_dir = os.path.join("metadata",matlab_meta["SUNRGBDMeta"][0][i][4][0]).replace("//", "/")[17:]
         depth_img_dir = os.path.join("metadata",matlab_meta["SUNRGBDMeta"][0][i][3][0]).replace("//", "/")[17:].replace("depth", "depth_bfx")
-        camera_calib["Rtilt"] = os.path.join("metadata",matlab_meta["SUNRGBDMeta"])[0][i][1]
-        camera_calib["K"] = os.path.join("metadata",matlab_meta["SUNRGBDMeta"])[0][i][2]
+        camera_calib["Rtilt"] = matlab_meta["SUNRGBDMeta"][0][i][1]
+        camera_calib["K"] = "metadata",matlab_meta["SUNRGBDMeta"][0][i][2]
         all_objs = []
 
 
@@ -116,6 +116,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
 
           with open(calib_filename, "w") as file:
               camera_calib_converted = {k: v.tolist() if isinstance(v, np.ndarray) else v for k, v in camera_calib.items()}
+              print(camera_calib_converted)
               json.dump(camera_calib_converted, file)
 
 
@@ -131,7 +132,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
           depth = cv2.imread(depth_img_dir, cv2.IMREAD_GRAYSCALE)
           pcd, pcd_color = depth_to_pcd.run(image, depth, camera_calib["Rtilt"], camera_calib["K"])
           stacked = np.concatenate((pcd, pcd_color), axis=1)
-          sampled = random_sampling(stacked, 175000)
+          sampled = sun_utils.random_sampling(stacked, 175000)
           np.savez_compressed(pcd_filename, pc=sampled)
           if save_votes:
               N = sampled.shape[0]
@@ -184,7 +185,4 @@ save_votes=True : saves votes
 '''
 
 
-extract_sunrgbd_data(save_folder, False, False, False, True)
-
-
-
+extract_sunrgbd_data(save_folder, True, True, True, True)
