@@ -68,10 +68,10 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
         votes_filename = os.path.join(save_folder, "votes", '%06d' % (file_idx))
 
         #image_folder = matlab_meta["SUNRGBDMeta"][0][i][0][0]
-        rgb_img_dir = os.path.join("metadata",matlab_meta["SUNRGBDMeta"][0][i][4][0]).replace("//", "/")[17:]
-        depth_img_dir = os.path.join("metadata",matlab_meta["SUNRGBDMeta"][0][i][3][0]).replace("//", "/")[17:].replace("depth", "depth_bfx")
+        rgb_img_dir = "metadata/" + matlab_meta["SUNRGBDMeta"][0][i][4][0].replace("//", "/")[17:]
+        depth_img_dir = "metadata/" + matlab_meta["SUNRGBDMeta"][0][i][3][0].replace("//", "/")[17:].replace("depth", "depth_bfx")
         camera_calib["Rtilt"] = matlab_meta["SUNRGBDMeta"][0][i][1]
-        camera_calib["K"] = "metadata",matlab_meta["SUNRGBDMeta"][0][i][2]
+        camera_calib["K"] = matlab_meta["SUNRGBDMeta"][0][i][2]
         all_objs = []
 
 
