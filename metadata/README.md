@@ -1,0 +1,5 @@
+put SUNRGBD dataset folder here
+
+SUNRGBD dataset download link:  https://rgbd.cs.princeton.edu/data/SUNRGBD.zip
+
+Extract-SunRGBD-Data -> metadata -> SUNRGBD -> kv1, kv2, realsense, xttion
