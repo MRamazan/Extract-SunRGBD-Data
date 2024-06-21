@@ -116,7 +116,6 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
 
           with open(calib_filename, "w") as file:
               camera_calib_converted = {k: v.tolist() if isinstance(v, np.ndarray) else v for k, v in camera_calib.items()}
-              print(camera_calib_converted)
               json.dump(camera_calib_converted, file)
 
 
