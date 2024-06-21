@@ -5,10 +5,6 @@ import matplotlib.pyplot as plt
 import open3d as o3d
 import yaml
 
-
-depth_image = iio.imread("/home/godling/Downloads/deneme-main/SUNRGBD/kv2/kinect2data/000002_2014-05-26_14-23-37_260595134347_rgbf000103-resize/depth/0000103.png")
-rgb_image = iio.imread("/home/godling/Downloads/deneme-main/SUNRGBD/kv1/NYUdata/NYU0001/image/NYU0001.jpg")
-
 from PIL import Image
 
 from mpl_toolkits.mplot3d import Axes3D
