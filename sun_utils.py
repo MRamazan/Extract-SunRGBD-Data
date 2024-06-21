@@ -35,7 +35,15 @@ class SUNObject3d_v2(object):
         self.orientation[1] = data[8]
         self.heading_angle = -1 * np.arctan2(self.orientation[1], self.orientation[0])
 
-
+def random_sampling(pc, num_sample, replace=None, return_choices=False):
+    """Input is NxC, output is num_samplexC"""
+    if replace is None:
+        replace = pc.shape[0] < num_sample
+    choices = np.random.choice(pc.shape[0], num_sample, replace=replace)
+    if return_choices:
+        return pc[choices], choices
+    else:
+        return pc[choices]
 
 def rotz(t):
         """Rotation about the z-axis."""
