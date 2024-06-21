@@ -185,4 +185,4 @@ save_votes=True : saves votes as .npz file
 '''
 
 
-extract_sunrgbd_data(save_folder, True, True, True, True)
+extract_sunrgbd_data(save_folder, True, True, False, False)
