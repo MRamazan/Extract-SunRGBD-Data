@@ -1,6 +1,6 @@
-Extracts: 
-image: 000001.jpg,...
-depth: 000001.png,...
+Extracts: <br>
+image: 000001.jpg,...<br>
+depth: 000001.png,...<br>
 
 label:[classname, centroid1,centroid2,centroid3,w,l,h,orientation1,orientatio2]
 
