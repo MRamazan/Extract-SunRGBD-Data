@@ -41,7 +41,6 @@ class ExampleDepthPointCloud:
         return np.array(cloud), np.array(cloud_color)
 
     def visualize_point_cloud(self, cloud, cloud_color):
-        # Visualize point cloud using matplotlib
         print(cloud)
         pcd2 = o3d.geometry.PointCloud()
         pcd2.points = o3d.utility.Vector3dVector(cloud)
@@ -50,7 +49,6 @@ class ExampleDepthPointCloud:
 
 
     def visualize_depth_image(self, depth):
-        # Visualize depth image using matplotlib
         plt.imshow(depth, cmap='gray')
         plt.title('Depth Image')
         plt.show()
