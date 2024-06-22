@@ -41,7 +41,6 @@ class ExampleDepthPointCloud:
         return np.array(cloud), np.array(cloud_color)
 
     def visualize_point_cloud(self, cloud, cloud_color):
-        print(cloud)
         pcd2 = o3d.geometry.PointCloud()
         pcd2.points = o3d.utility.Vector3dVector(cloud)
         pcd2.colors = o3d.utility.Vector3dVector(cloud_color / 255)
