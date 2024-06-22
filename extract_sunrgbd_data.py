@@ -143,16 +143,12 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
               for obj in objects:
                   if obj.classname not in classes: continue
                   try:
-
-                      # Find all points in this object's OBB
                       box3d_pts_3d = sun_utils.my_compute_box_3d(obj.centroid,
                                                                      np.array([obj.l, obj.w, obj.h]), obj.heading_angle)
                       pc_in_box3d, inds = sun_utils.extract_pc_in_box3d(sampled, box3d_pts_3d)
-                      # Assign first dimension to indicate it is in an object box
                       point_votes[inds, 0] = 1
-                      # Add the votes (all 0 if the point is not in any object's OBB)
                       votes = np.expand_dims(obj.centroid, 0) - pc_in_box3d[:, 0:3]
-                      sparse_inds = indices[inds]  # turn dense True,False inds to sparse number-wise inds
+                      sparse_inds = indices[inds]  
                       for i in range(len(sparse_inds)):
                           j = sparse_inds[i]
                           point_votes[j, int(point_vote_idx[j] * 3 + 1):int((point_vote_idx[j] + 1) * 3 + 1)] = votes[i,
