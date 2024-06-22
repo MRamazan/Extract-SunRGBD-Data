@@ -130,7 +130,7 @@ class Visualize():
 
     def get_rgb_image(self, idx):
         rgb_filename = os.path.join(self.image_dir, '%06d.jpg' % (idx))
-        rgb_image = cv2.imread(rgb_filename)
+        rgb_image = cv2.cvtColor(cv2.imread(rgb_filename), cv2.COLOR_RGB2BGR)
         return rgb_image
 
     def get_depth_image(self, idx):
