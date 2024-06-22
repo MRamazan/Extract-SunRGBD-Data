@@ -5,9 +5,9 @@ label:[classname, centroid1,centroid2,centroid3,w,l,h,orientation1,orientatio2]
 
 
 pcd: [N,6] point cloud data created from depth image <br>
-     np.array([N, 6]) N = number of points <br>
-     pcd = np.load("000001.npz") <br>
-     points = pcd[:, 0:3] , colors = pcd[:, 3:6]
+     &nbs;pnp.array([N, 6]) N = number of points <br>
+     &nbs;ppcd = np.load("000001.npz") <br>
+     &nbs;ppoints = pcd[:, 0:3] , colors = pcd[:, 3:6]
 
 
 
