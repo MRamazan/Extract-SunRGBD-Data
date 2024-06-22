@@ -21,5 +21,6 @@ votes: np.load("votes/000001.npz")<br><br>
 
 VISUALIZE PCD:<br>
 ![](example_imgs/pcd.png)<br>
+VISUALIZE 3D BBOXES ON 2D IMAGE:<br>
 ![](example_imgs/3dbboxes_on_2d_image.png)
 
