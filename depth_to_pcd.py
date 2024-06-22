@@ -16,14 +16,12 @@ class ExampleDepthPointCloud:
 
 
     def load_image(self, name):
-        # Load image using PIL
         img = cv2.cvtColor(cv2.imread(name), cv2.COLOR_BGR2RGB)
         return np.array(img)
 
 
 
     def depth_to_3d(self,rgb, depth, K):
-        # Convert depth image to 3D points
         cloud = []
         cloud_color = []
         fx = K[0, 0]
