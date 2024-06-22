@@ -21,5 +21,5 @@ votes: np.load("votes/000001.npz")<br><br>
 
 VISUALIZE PCD:<br>
 ![](example_imgs/pcd.png)<br>
-![](example_imgs/3dbboxes_on_2d_img.png)
+![](example_imgs/3dbboxes_on_2d_image.png)
 
