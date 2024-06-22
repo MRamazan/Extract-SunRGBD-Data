@@ -27,11 +27,11 @@ def VISUALIZE_POINT_CLOUD_DATA_AND_BBOXES(pcd, corners3d):
     visualize.visualize_point_cloud_data_and_bboxes(point_cloud, corners3d)
 
 '''VISUALIZE POINT CLOUD DATA AND BBOXES
-   Required folders:  Extract-SunRGBD-Data/calib, Extract-SunRGBD-Data/image, Extract-SunRGBD-Data/label'''
+   Required folders:  Extract-SunRGBD-Data/calib, Extract-SunRGBD-Data/label,Extract-SunRGBD-Data/pcd'''
 #VISUALIZE_POINT_CLOUD_DATA_AND_BBOXES(pcd, corners3d)
 
 '''VISUALIZE 3D BBOXES ON 2D IMAGE
-   Required folders:  Extract-SunRGBD-Data/image, Extract-SunRGBD-Data/calib'''
+   Required folders:  Extract-SunRGBD-Data/image, Extract-SunRGBD-Data/label, Extract-SunRGBD-Data/calib'''
 #VISUALIZE_3D_BBOXES_ON_2D_IMAGE(rgb_image, corners3d, K, Rtilt)
 
 
