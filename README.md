@@ -17,5 +17,9 @@ with open("calib/000001.txt", "r") as file:<br>
      calib = json.load(file)<br>
 Rtilt = calib["Rtilt]<br>
 K = calib["K"]<br>
+votes: np.load("votes/000001.npz")<br><br>
 
-votes: np.load("votes/000001.npz")
+VISUALIZE PCD:<br>
+![](example_imgs/pcd.png)<br>
+![](example_imgs/3dbboxes_on_2d_img.png)
+
