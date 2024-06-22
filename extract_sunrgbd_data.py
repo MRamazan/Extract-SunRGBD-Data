@@ -92,6 +92,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
                continue
         if len(all_objs) == 0:
             no_obj += 1
+            continue
         else:
             img_paths.append(rgb_img_dir)
 
