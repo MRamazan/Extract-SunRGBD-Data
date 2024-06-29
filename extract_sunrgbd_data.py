@@ -133,7 +133,7 @@ def extract_sunrgbd_data(save_folder,save=False, save_imgs=False, save_pcd=False
           depth = cv2.imread(depth_img_dir, cv2.IMREAD_GRAYSCALE)
           pcd, pcd_color = depth_to_pcd.run(image, depth, camera_calib["Rtilt"], camera_calib["K"])
           stacked = np.concatenate((pcd, pcd_color), axis=1)
-          sampled = sun_utils.random_sampling(stacked, 150000)
+          sampled = sun_utils.random_sampling(stacked, 125000)
           np.savez_compressed(pcd_filename, pc=sampled)
           if save_votes:
               N = sampled.shape[0]
