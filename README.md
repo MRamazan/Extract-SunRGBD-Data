@@ -16,7 +16,7 @@ calib: {Rtilt: [[x,x,x],[x,x,x],[x,x,x]], K:[[fx,0,cx],[0,fy,cy],[0,0,1]]}    <b
 ```bash 
 with open("calib/000001.txt", "r") as file:<br>
      calib = json.load(file)<br>
-     Rtilt = calib["Rtilt]<br>
+     Rtilt = calib["Rtilt"]<br>
      K = calib["K"]<br>
 #np.load("votes/000001.npz")
 ```
