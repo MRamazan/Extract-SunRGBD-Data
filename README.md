@@ -13,12 +13,12 @@ pcd: [N,6] point cloud data created from depth image <br>
 
 
 calib: {Rtilt: [[x,x,x],[x,x,x],[x,x,x]], K:[[fx,0,cx],[0,fy,cy],[0,0,1]]}    <br>    
-'''bash 
+```bash 
 with open("calib/000001.txt", "r") as file:<br>
      calib = json.load(file)<br>
      Rtilt = calib["Rtilt]<br>
      K = calib["K"]<br>
-votes: np.load("votes/000001.npz")'''<br><br>
+votes: np.load("votes/000001.npz")```<br><br>
 
 VISUALIZE PCD:<br>
 ![](example_imgs/pcd.png)<br>
