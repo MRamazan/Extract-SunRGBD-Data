@@ -18,6 +18,14 @@ python3 extract_sunrgbd_data.py --save_folder "sunrgbd_labels" --save True --sav
 
 ## PCD 
 
+### Point Cloud Data (`pcd`)
+
+The point cloud data is represented as an array with the following structure:
+- **Shape**: `[N, 6]` where `N` is the number of points.
+- Each point consists of:
+  - **3D Coordinates (x, y, z)**: The first three columns (`pcd[:, 0:3]`).
+  - **RGB Color (r, g, b)**: The last three columns (`pcd[:, 3:6]`).
+
 ```bash 
 #pcd: [N,6] point cloud data created from depth image 
 #np.array([N, 6]) N = number of points 
