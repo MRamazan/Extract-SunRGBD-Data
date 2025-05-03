@@ -103,6 +103,7 @@ python3 visualize.py --image_index 11 --visualize_function 1
 
 
 ```bash
+#uncomment the line below if you get window error
 #export XDG_SESSION_TYPE=x11
 python3 visualize.py --image_index 11 --visualize_function 2
 ```
