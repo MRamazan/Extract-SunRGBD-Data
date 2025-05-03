@@ -10,7 +10,7 @@ source venv/bin/activate
 
 # Extract data
 # You can set classes in extract_sunrgbd_data.py file
-python3 extract_sunrgbd_data.py --save_folder "sunrgbd_data" --save True --save_imgs True --save_pcd True --save_votes False --sample_point_count 100000
+python3 extract_sunrgbd_data.py --save_folder "sunrgbd_labels" --save True --save_imgs True --save_pcd True --save_votes False --sample_point_count 100000
 
 ```
 
