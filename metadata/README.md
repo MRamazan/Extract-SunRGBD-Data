@@ -3,7 +3,7 @@ put SUNRGBD dataset folder here
 SUNRGBD dataset download link:  https://rgbd.cs.princeton.edu/data/SUNRGBD.zip
 
 
-it should look like 
+it should look like this:
 
 ```bash
 Extract-SunRGBD-Data/
