@@ -16,6 +16,7 @@ git clone https://github.com/MRamazan/Extract-SunRGBD-Data
 cd Extract-SunRGBD-Data
 python3 -m venv venv
 source venv/bin/activate
+pip install -r requirements.txt
 
 # Extract data
 # You can set classes in extract_sunrgbd_data.py file
