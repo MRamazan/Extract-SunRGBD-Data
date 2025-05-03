@@ -1,8 +1,7 @@
 # Environment
 
-The project environment consists of the following:
-- **Operating System**: Ubuntu 24.04
-- **Python Version**: 3.10
+- Ubuntu 24.04
+- Python 3.10
 
 
 
