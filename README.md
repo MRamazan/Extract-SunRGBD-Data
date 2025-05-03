@@ -29,8 +29,26 @@ colors = pcd[:, 3:6]
 
 ## Calib 
 
-calib: {Rtilt: [[x,x,x],[x,x,x],[x,x,x]], K:[[fx,0,cx],[0,fy,cy],[0,0,1]]} <br>
-label: [classname, centroid1, centroid2, centroid3, w, l, h, orientation1, orientation2]
+### Calibration Matrix (`calib`)
+
+The calibration matrix consists of two parts:
+- **Rotation Matrix (`Rtilt`)**: Defines the orientation of the object.
+- **Intrinsic Matrix (`K`)**: Contains the camera's intrinsic parameters.
+
+```python
+calib: {
+  Rtilt: [
+    [x, x, x],
+    [x, x, x],
+    [x, x, x]
+  ],
+  K: [
+    [fx, 0, cx],
+    [0, fy, cy],
+    [0, 0, 1]
+  ]
+}
+
 
 ```bash 
 with open("calib/000001.txt", "r") as file:
