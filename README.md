@@ -1,3 +1,11 @@
+### Environment
+
+The project environment consists of the following:
+- **Operating System**: Ubuntu 24.04
+- **Python Version**: 3.10
+
+
+
 # SETUP
 
 ```bash
