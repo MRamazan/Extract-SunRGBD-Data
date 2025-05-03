@@ -1,4 +1,4 @@
-### Environment
+# Environment
 
 The project environment consists of the following:
 - **Operating System**: Ubuntu 24.04
