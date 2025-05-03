@@ -7,6 +7,24 @@
 
 # SETUP
 
+put SUNRGBD dataset folder in metadata folder
+
+SUNRGBD dataset download link:  https://rgbd.cs.princeton.edu/data/SUNRGBD.zip
+
+it should look like this:
+
+```bash
+Extract-SunRGBD-Data/
+└── metadata/
+    └── SUNRGBD/
+        ├── kv1/
+        ├── kv2/
+        ├── realsense/
+        └── xtion/
+```
+
+
+
 ```bash
 
 # Clone repo 
