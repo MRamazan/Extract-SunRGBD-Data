@@ -1,3 +1,5 @@
+# SETUP
+
 ```bash
 
 # Clone repo 
@@ -14,6 +16,7 @@ python3 extract_sunrgbd_data.py --save_folder "sunrgbd_labels" --save True --sav
 
 ```
 
+## PCD load
 
 ```bash 
 #pcd: [N,6] point cloud data created from depth image 
@@ -22,6 +25,9 @@ pcd = np.load("pcd/000001.npz")
 points = pcd[:, 0:3] 
 colors = pcd[:, 3:6]
 ```
+
+
+## Calib load
 
 calib: {Rtilt: [[x,x,x],[x,x,x],[x,x,x]], K:[[fx,0,cx],[0,fy,cy],[0,0,1]]}    <br> 
 label: [classname, centroid1,centroid2,centroid3,w,l,h,orientation1,orientatio2]
@@ -34,7 +40,12 @@ with open("calib/000001.txt", "r") as file:
 ```
 <br><br>
 
-VISUALIZE PCD:<br>
+# VISUALIZE
+
+```bash
+python3 visualize.py --image_index 11 --visualize_function 1
+```
+<br>
 ![](example_imgs/pcd.png)<br>
 VISUALIZE 3D BBOXES ON 2D IMAGE:<br>
 ![](example_imgs/3dbboxes_on_2d_image.png)
