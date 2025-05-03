@@ -45,10 +45,11 @@ with open("calib/000001.txt", "r") as file:
 ```bash
 python3 visualize.py --image_index 11 --visualize_function 1
 ```
-
-<br>
-
 ![](example_imgs/pcd.png)<br>
-VISUALIZE 3D BBOXES ON 2D IMAGE:<br>
+
+
+```bash
+python3 visualize.py --image_index 11 --visualize_function 2
+```
 ![](example_imgs/3dbboxes_on_2d_image.png)
 
