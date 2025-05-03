@@ -10,7 +10,7 @@
 ```bash
 
 # Clone repo 
-git clone git clone https://github.com/MRamazan/Extract-SunRGBD-Data
+git clone https://github.com/MRamazan/Extract-SunRGBD-Data
 
 # Setup
 cd Extract-SunRGBD-Data
