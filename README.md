@@ -1,6 +1,17 @@
-Extracts: <br>
-image: 000001.jpg,...<br>
-depth: 000001.png,...<br>
+```bash
+
+# Clone repo 
+git clone git clone https://github.com/MRamazan/Extract-SunRGBD-Data
+
+# Setup
+cd Extract-SunRGBD-Data
+python3 -m venv venv
+source venv/bin/activate
+
+# Extract data
+python3 extract_sunrgbd_data.py --save_folder "sunrgbd_data" --save True --save_imgs True --save_pcd True --save_votes False --sample_point_count 100000
+
+```
 
 
 label:[classname, centroid1,centroid2,centroid3,w,l,h,orientation1,orientatio2]
