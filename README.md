@@ -16,7 +16,7 @@ python3 extract_sunrgbd_data.py --save_folder "sunrgbd_labels" --save True --sav
 
 ```
 
-## PCD load
+## PCD 
 
 ```bash 
 #pcd: [N,6] point cloud data created from depth image 
@@ -27,7 +27,7 @@ colors = pcd[:, 3:6]
 ```
 
 
-## Calib load
+## Calib 
 
 calib: {Rtilt: [[x,x,x],[x,x,x],[x,x,x]], K:[[fx,0,cx],[0,fy,cy],[0,0,1]]}    <br> 
 label: [classname, centroid1,centroid2,centroid3,w,l,h,orientation1,orientatio2]
