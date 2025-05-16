@@ -84,7 +84,6 @@ calib: {
 }
 
 
-```bash 
 with open("calib/000001.txt", "r") as file:
      calib = json.load(file)
      Rtilt = calib["Rtilt"]
